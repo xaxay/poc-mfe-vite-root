@@ -353,7 +353,7 @@
       },
       {
         "find": "@browser-module/ui/header",
-        "replacement": "https://xaxay.github.io/poc-mfe-vite-header/header.js"
+        "replacement": "http://localhost:6002/poc-mfe-vite-header/header.js"
       },
       {
         "find": "@browser-module/ui/login",
@@ -361,11 +361,11 @@
       },
       {
         "find": "@browser-module/ui/dashboard",
-        "replacement": "https://xaxay.github.io/poc-mfe-vite-dashboard/dashboard.js"
+        "replacement": "http://localhost:6003/poc-mfe-vite-dashboard/dashboard.js"
       },
       {
         "find": "@browser-module/ui/admin",
-        "replacement": "/src/components/admin/Admin.vue"
+        "replacement": "http://localhost:6004/poc-mfe-vite-admin/src/components/admin/Admin.vue"
       },
       {
         "find": "@browser-module/ui/account",
@@ -484,7 +484,6 @@
         "@browser-module/api/user": "/src/api/user.ts",
         "@browser-module/api/nav": "/src/api/nav.ts",
         "@browser-module/ui/login": "/src/components/Login.vue",
-        "@browser-module/ui/admin": "/src/components/admin/Admin.vue",
         "@browser-module/ui/account": "/src/components/CounterClicker.vue",
         "@browser-module/ui/rumors": "/src/components/CounterClicker.vue",
         "@browser-module/ui/app4": "/src/components/CounterClicker.vue",
