@@ -353,7 +353,7 @@
       },
       {
         "find": "@browser-module/ui/header",
-        "replacement": "http://localhost:6002/poc-mfe-vite-header/header.js"
+        "replacement": "https://xaxay.github.io/poc-mfe-vite-header/header.js"
       },
       {
         "find": "@browser-module/ui/login",
@@ -361,11 +361,11 @@
       },
       {
         "find": "@browser-module/ui/dashboard",
-        "replacement": "http://localhost:6003/poc-mfe-vite-dashboard/dashboard.js"
+        "replacement": "https://xaxay.github.io/poc-mfe-vite-dashboard/dashboard.js"
       },
       {
         "find": "@browser-module/ui/admin",
-        "replacement": "http://localhost:6004/poc-mfe-vite-admin/src/components/admin/Admin.vue"
+        "replacement": "https://xaxay.github.io/poc-mfe-vite-admin/admin.js"
       },
       {
         "find": "@browser-module/ui/account",

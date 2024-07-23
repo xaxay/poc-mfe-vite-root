@@ -8,12 +8,12 @@
     "@browser-module/api/user": "/src/api/user.ts",
     "@browser-module/api/nav": "/src/api/nav.ts",
 
-    "@browser-module/ui/header": "http://localhost:6002/poc-mfe-vite-header/header.js",
+    "@browser-module/ui/header": "https://xaxay.github.io/poc-mfe-vite-header/header.js",
 
     "@browser-module/ui/login": "/src/components/Login.vue",
-    "@browser-module/ui/dashboard": "http://localhost:6003/poc-mfe-vite-dashboard/dashboard.js",
+    "@browser-module/ui/dashboard": "https://xaxay.github.io/poc-mfe-vite-dashboard/dashboard.js",
 
-    "@browser-module/ui/admin": "http://localhost:6004/poc-mfe-vite-admin/src/components/admin/Admin.vue",
+    "@browser-module/ui/admin": "https://xaxay.github.io/poc-mfe-vite-admin/admin.js",
     "@browser-module/ui/account": "/src/components/CounterClicker.vue",
     "@browser-module/ui/rumors": "/src/components/CounterClicker.vue",
 
