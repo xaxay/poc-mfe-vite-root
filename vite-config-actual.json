@@ -1,0 +1,602 @@
+{
+  "base": "/poc-mfe-vite/",
+  "plugins": [
+    {
+      "name": "vite:build-metadata"
+    },
+    {
+      "name": "vite:watch-package-data"
+    },
+    {
+      "name": "vite:pre-alias"
+    },
+    {
+      "name": "alias"
+    },
+    {
+      "name": "vuetify:styles",
+      "enforce": "pre"
+    },
+    {
+      "name": "vite:modulepreload-polyfill"
+    },
+    {
+      "name": "vite:resolve"
+    },
+    {
+      "name": "vite:html-inline-proxy"
+    },
+    {
+      "name": "vite:css"
+    },
+    {
+      "name": "vite:esbuild"
+    },
+    {
+      "name": "vite:json"
+    },
+    {
+      "name": "vite:wasm-helper"
+    },
+    {
+      "name": "vite:worker"
+    },
+    {
+      "name": "vite:asset"
+    },
+    {
+      "name": "vite:vue",
+      "api": {
+        "options": {
+          "isProduction": true,
+          "compiler": null,
+          "include": {},
+          "customElement": {},
+          "template": {
+            "transformAssetUrls": {
+              "VAppBar": [
+                "image"
+              ],
+              "VAvatar": [
+                "image"
+              ],
+              "VBanner": [
+                "avatar"
+              ],
+              "VCard": [
+                "image",
+                "prependAvatar",
+                "appendAvatar",
+                "prepend-avatar",
+                "append-avatar"
+              ],
+              "VCardItem": [
+                "prependAvatar",
+                "appendAvatar",
+                "prepend-avatar",
+                "append-avatar"
+              ],
+              "VCarouselItem": [
+                "src",
+                "lazySrc",
+                "srcset",
+                "lazy-src"
+              ],
+              "VChip": [
+                "prependAvatar",
+                "appendAvatar",
+                "prepend-avatar",
+                "append-avatar"
+              ],
+              "VImg": [
+                "src",
+                "lazySrc",
+                "srcset",
+                "lazy-src"
+              ],
+              "VListItem": [
+                "prependAvatar",
+                "appendAvatar",
+                "prepend-avatar",
+                "append-avatar"
+              ],
+              "VNavigationDrawer": [
+                "image"
+              ],
+              "VParallax": [
+                "src",
+                "lazySrc",
+                "srcset",
+                "lazy-src"
+              ],
+              "VToolbar": [
+                "image"
+              ],
+              "v-app-bar": [
+                "image"
+              ],
+              "v-avatar": [
+                "image"
+              ],
+              "v-banner": [
+                "avatar"
+              ],
+              "v-card": [
+                "image",
+                "prependAvatar",
+                "appendAvatar",
+                "prepend-avatar",
+                "append-avatar"
+              ],
+              "v-card-item": [
+                "prependAvatar",
+                "appendAvatar",
+                "prepend-avatar",
+                "append-avatar"
+              ],
+              "v-carousel-item": [
+                "src",
+                "lazySrc",
+                "srcset",
+                "lazy-src"
+              ],
+              "v-chip": [
+                "prependAvatar",
+                "appendAvatar",
+                "prepend-avatar",
+                "append-avatar"
+              ],
+              "v-img": [
+                "src",
+                "lazySrc",
+                "srcset",
+                "lazy-src"
+              ],
+              "v-list-item": [
+                "prependAvatar",
+                "appendAvatar",
+                "prepend-avatar",
+                "append-avatar"
+              ],
+              "v-navigation-drawer": [
+                "image"
+              ],
+              "v-parallax": [
+                "src",
+                "lazySrc",
+                "srcset",
+                "lazy-src"
+              ],
+              "v-toolbar": [
+                "image"
+              ],
+              "video": [
+                "src",
+                "poster"
+              ],
+              "source": [
+                "src"
+              ],
+              "img": [
+                "src"
+              ],
+              "image": [
+                "xlink:href",
+                "href"
+              ],
+              "use": [
+                "xlink:href",
+                "href"
+              ]
+            }
+          },
+          "root": "/home/mpopel/lab/poc-mfe-vite-root",
+          "sourceMap": false,
+          "cssDevSourcemap": false,
+          "devToolsEnabled": false
+        },
+        "version": "5.0.5"
+      }
+    },
+    {
+      "name": "vite-plugin-vue-build-injected-css"
+    },
+    {
+      "name": "vuetify:import-browser"
+    },
+    {
+      "name": "vite-plugin-import-map",
+      "transformIndexHtml": {
+        "order": "post"
+      }
+    },
+    {
+      "name": "log-config-plugin"
+    },
+    {
+      "name": "vite:wasm-fallback"
+    },
+    {
+      "name": "vite:define"
+    },
+    {
+      "name": "vite:css-post"
+    },
+    {
+      "name": "vite:build-html"
+    },
+    {
+      "name": "vite:worker-import-meta-url"
+    },
+    {
+      "name": "vite:asset-import-meta-url"
+    },
+    {
+      "name": "vite:force-systemjs-wrap-complete"
+    },
+    {
+      "name": "commonjs",
+      "version": "26.0.1"
+    },
+    {
+      "name": "vite:data-uri"
+    },
+    {
+      "name": "vite:dynamic-import-vars"
+    },
+    {
+      "name": "vite:import-glob"
+    },
+    {
+      "name": "vite:build-import-analysis"
+    },
+    {
+      "name": "vite:esbuild-transpile"
+    },
+    {
+      "name": "vite:terser"
+    },
+    {
+      "name": "vite:reporter"
+    },
+    {
+      "name": "vite:load-fallback"
+    }
+  ],
+  "define": {
+    "process.env": {},
+    "__VUE_OPTIONS_API__": true,
+    "__VUE_PROD_DEVTOOLS__": false,
+    "__VUE_PROD_HYDRATION_MISMATCH_DETAILS__": false
+  },
+  "resolve": {
+    "mainFields": [
+      "browser",
+      "module",
+      "jsnext:main",
+      "jsnext"
+    ],
+    "conditions": [],
+    "extensions": [
+      ".js",
+      ".json",
+      ".jsx",
+      ".mjs",
+      ".ts",
+      ".tsx",
+      ".vue"
+    ],
+    "dedupe": [
+      "vue"
+    ],
+    "preserveSymlinks": false,
+    "alias": [
+      {
+        "find": "@",
+        "replacement": "/home/mpopel/lab/poc-mfe-vite-root/src"
+      },
+      {
+        "find": "axios",
+        "replacement": "https://cdn.jsdelivr.net/npm/axios/+esm"
+      },
+      {
+        "find": "vue",
+        "replacement": "https://cdn.jsdelivr.net/npm/vue@3.4.31/dist/vue.esm-browser.js"
+      },
+      {
+        "find": "vue-router",
+        "replacement": "https://cdn.jsdelivr.net/npm/vue-router@4.4.0/dist/vue-router.esm-browser.js"
+      },
+      {
+        "find": "vue-demi",
+        "replacement": "https://cdn.jsdelivr.net/npm/vue-demi/lib/index.esm.js"
+      },
+      {
+        "find": "vuetify",
+        "replacement": "https://cdn.jsdelivr.net/npm/vuetify@3.6.12/dist/vuetify.esm.js"
+      },
+      {
+        "find": "vuetify-labs",
+        "replacement": "https://cdn.jsdelivr.net/npm/vuetify@3.6.12/dist/vuetify-labs.esm.js"
+      },
+      {
+        "find": "pinia",
+        "replacement": "https://cdn.jsdelivr.net/npm/pinia@2.1.7/dist/pinia.esm-browser.js"
+      },
+      {
+        "find": "pinia-plugin-persistedstate",
+        "replacement": "https://cdn.jsdelivr.net/npm/pinia-plugin-persistedstate@3.2.1/dist/index.mjs"
+      },
+      {
+        "find": "@vue/devtools-api",
+        "replacement": "https://cdn.jsdelivr.net/npm/@vue/devtools-api@6/+esm"
+      },
+      {
+        "find": "@browser-module/router",
+        "replacement": "/src/router.ts"
+      },
+      {
+        "find": "@browser-module/config/routes",
+        "replacement": "/src/config/routes.ts"
+      },
+      {
+        "find": "@browser-module/stores/counter",
+        "replacement": "/src/stores/counterStore.ts"
+      },
+      {
+        "find": "@browser-module/api/user",
+        "replacement": "/src/api/user.ts"
+      },
+      {
+        "find": "@browser-module/api/nav",
+        "replacement": "/src/api/nav.ts"
+      },
+      {
+        "find": "@browser-module/ui/header",
+        "replacement": "http://localhost:5002/poc-mfe-vite/src/components/Header.vue"
+      },
+      {
+        "find": "@browser-module/ui/login",
+        "replacement": "/src/components/Login.vue"
+      },
+      {
+        "find": "@browser-module/ui/dashboard",
+        "replacement": "/src/components/Dashboard.vue"
+      },
+      {
+        "find": "@browser-module/ui/admin",
+        "replacement": "/src/components/admin/Admin.vue"
+      },
+      {
+        "find": "@browser-module/ui/account",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/rumors",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app4",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app5",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app6",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app7",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app8",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app9",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app10",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app11",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app12",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app13",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app14",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app15",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app16",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app17",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": "@browser-module/ui/app18",
+        "replacement": "/src/components/CounterClicker.vue"
+      },
+      {
+        "find": {},
+        "replacement": "/@fs/home/mpopel/lab/poc-mfe-vite-root/node_modules/vite/dist/client/env.mjs"
+      },
+      {
+        "find": {},
+        "replacement": "/@fs/home/mpopel/lab/poc-mfe-vite-root/node_modules/vite/dist/client/client.mjs"
+      }
+    ]
+  },
+  "server": {
+    "preTransformRequests": true,
+    "port": 5001,
+    "historyApiFallback": true,
+    "middlewareMode": false,
+    "fs": {
+      "strict": true,
+      "allow": [
+        "/home/mpopel/lab/poc-mfe-vite-root"
+      ],
+      "deny": [
+        ".env",
+        ".env.*",
+        "*.{crt,pem}"
+      ]
+    }
+  },
+  "preview": {
+    "port": 6001
+  },
+  "build": {
+    "target": "esnext",
+    "cssTarget": "esnext",
+    "outDir": "docs",
+    "assetsDir": "assets",
+    "assetsInlineLimit": 4096,
+    "cssCodeSplit": true,
+    "sourcemap": false,
+    "rollupOptions": {
+      "output": {},
+      "preserveEntrySignatures": "strict",
+      "input": {
+        "index": "/home/mpopel/lab/poc-mfe-vite-root/index.html",
+        "@browser-module/router": "/src/router.ts",
+        "@browser-module/config/routes": "/src/config/routes.ts",
+        "@browser-module/stores/counter": "/src/stores/counterStore.ts",
+        "@browser-module/api/user": "/src/api/user.ts",
+        "@browser-module/api/nav": "/src/api/nav.ts",
+        "@browser-module/ui/login": "/src/components/Login.vue",
+        "@browser-module/ui/dashboard": "/src/components/Dashboard.vue",
+        "@browser-module/ui/admin": "/src/components/admin/Admin.vue",
+        "@browser-module/ui/account": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/rumors": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app4": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app5": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app6": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app7": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app8": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app9": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app10": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app11": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app12": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app13": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app14": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app15": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app16": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app17": "/src/components/CounterClicker.vue",
+        "@browser-module/ui/app18": "/src/components/CounterClicker.vue"
+      }
+    },
+    "minify": "esbuild",
+    "terserOptions": {},
+    "write": true,
+    "emptyOutDir": null,
+    "copyPublicDir": true,
+    "manifest": false,
+    "lib": false,
+    "ssr": false,
+    "ssrManifest": false,
+    "ssrEmitAssets": false,
+    "reportCompressedSize": true,
+    "chunkSizeWarningLimit": 500,
+    "watch": null,
+    "commonjsOptions": {
+      "include": [
+        {}
+      ],
+      "extensions": [
+        ".js",
+        ".cjs"
+      ]
+    },
+    "dynamicImportVarsOptions": {
+      "warnOnError": true,
+      "exclude": [
+        {}
+      ]
+    },
+    "modulePreload": {
+      "polyfill": true
+    },
+    "cssMinify": true
+  },
+  "ssr": {
+    "target": "node",
+    "external": [],
+    "optimizeDeps": {
+      "noDiscovery": true,
+      "esbuildOptions": {
+        "preserveSymlinks": false
+      }
+    }
+  },
+  "configFile": "/home/mpopel/lab/poc-mfe-vite-root/vite.config.mts",
+  "configFileDependencies": [
+    "/home/mpopel/lab/poc-mfe-vite-root/src/config/baseUrl.ts",
+    "/home/mpopel/lab/poc-mfe-vite-root/vite-plugin-vuetify-browser.ts",
+    "/home/mpopel/lab/poc-mfe-vite-root/vite-plugin-import-maps.ts",
+    "/home/mpopel/lab/poc-mfe-vite-root/vite-plugin-vue-build-injected-css.ts",
+    "/home/mpopel/lab/poc-mfe-vite-root/vite.config.mts"
+  ],
+  "inlineConfig": {
+    "build": {}
+  },
+  "root": "/home/mpopel/lab/poc-mfe-vite-root",
+  "rawBase": "/poc-mfe-vite/",
+  "publicDir": "/home/mpopel/lab/poc-mfe-vite-root/public",
+  "cacheDir": "/home/mpopel/lab/poc-mfe-vite-root/node_modules/.vite",
+  "command": "build",
+  "mode": "production",
+  "isWorker": false,
+  "mainConfig": null,
+  "bundleChain": [],
+  "isProduction": true,
+  "css": {},
+  "esbuild": {
+    "jsxDev": false
+  },
+  "envDir": "/home/mpopel/lab/poc-mfe-vite-root",
+  "env": {
+    "BASE_URL": "/poc-mfe-vite/",
+    "MODE": "production",
+    "DEV": false,
+    "PROD": true
+  },
+  "logger": {
+    "hasWarned": false
+  },
+  "packageCache": {},
+  "optimizeDeps": {
+    "holdUntilCrawlEnd": true,
+    "esbuildOptions": {
+      "preserveSymlinks": false
+    }
+  },
+  "worker": {
+    "format": "iife",
+    "rollupOptions": {}
+  },
+  "appType": "spa",
+  "experimental": {
+    "importGlobRestoreExtension": false,
+    "hmrPartialAccept": false
+  }
+}

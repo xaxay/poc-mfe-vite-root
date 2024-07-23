@@ -1,0 +1,1 @@
+import{defineStore as t}from"pinia";console.log("counterStore created");const o=t("counter",{state:()=>({counter:0}),actions:{incrementCounter(){this.counter+=1},multiplyCounter(){this.counter*=2},resetCounter(){this.counter=0}},persist:!0});export{o as useCounterStore};
