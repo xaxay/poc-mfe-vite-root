@@ -10,7 +10,7 @@ Vite / ImportMaps / HTML / JS / CSS / Vue3 / Vuetify3 / Pinia.
 
 It is distributed on few repositories:
 
-* [poc-mfe-vite-root](https://github.com/xaxay/poc-mfe-vite-root) 
+* [**poc-mfe-vite-root**](https://github.com/xaxay/poc-mfe-vite-root) 
 * [poc-mfe-vite-header](https://github.com/xaxay/poc-mfe-vite-header) 
 * [poc-mfe-vite-dashboard](https://github.com/xaxay/poc-mfe-vite-dashboard) 
 * [poc-mfe-vite-admin](https://github.com/xaxay/poc-mfe-vite-admin) 
