@@ -1,3 +1,3 @@
 // src/config/baseUrl.ts
 
-export default '/poc-mfe-vite-header/';
+export default '/poc-mfe-vite-root/';

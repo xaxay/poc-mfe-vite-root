@@ -1,5 +1,5 @@
 {
-  "base": "/poc-mfe-vite-header/",
+  "base": "/poc-mfe-vite-root/",
   "plugins": [
     {
       "name": "vite:build-metadata"
@@ -560,7 +560,7 @@
     "build": {}
   },
   "root": "/home/mpopel/lab/poc-mfe-vite-root",
-  "rawBase": "/poc-mfe-vite-header/",
+  "rawBase": "/poc-mfe-vite-root/",
   "publicDir": "/home/mpopel/lab/poc-mfe-vite-root/public",
   "cacheDir": "/home/mpopel/lab/poc-mfe-vite-root/node_modules/.vite",
   "command": "build",
@@ -575,7 +575,7 @@
   },
   "envDir": "/home/mpopel/lab/poc-mfe-vite-root",
   "env": {
-    "BASE_URL": "/poc-mfe-vite-header/",
+    "BASE_URL": "/poc-mfe-vite-root/",
     "MODE": "production",
     "DEV": false,
     "PROD": true
