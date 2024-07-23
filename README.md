@@ -21,8 +21,6 @@ It is distributed on few repositories:
 
 It proves that it works and demonstrate how all these parts are initialized and interacted together from different in-browser modules!
 
-For simplicity all modules are exposed from one repo!
-
 ## Installation
 
 `yarn`
