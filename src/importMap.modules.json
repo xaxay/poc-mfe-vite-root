@@ -8,7 +8,7 @@
     "@browser-module/api/user": "/src/api/user.ts",
     "@browser-module/api/nav": "/src/api/nav.ts",
 
-    "@browser-module/ui/header": "http://localhost:6002/poc-mfe-vite/header.js",
+    "@browser-module/ui/header": "https://xaxay.github.io/poc-mfe-vite-header/header.js",
 
     "@browser-module/ui/login": "/src/components/Login.vue",
     "@browser-module/ui/dashboard": "/src/components/Dashboard.vue",
