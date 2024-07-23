@@ -2,7 +2,7 @@
   "base": "/poc-mfe-vite/",
   "plugins": [
     {
-      "name": "vite:build-metadata"
+      "name": "vite:optimized-deps"
     },
     {
       "name": "vite:watch-package-data"
@@ -191,7 +191,7 @@
             }
           },
           "root": "/home/mpopel/lab/poc-mfe-vite-root",
-          "sourceMap": false,
+          "sourceMap": true,
           "cssDevSourcemap": false,
           "devToolsEnabled": false
         },
@@ -223,23 +223,10 @@
       "name": "vite:css-post"
     },
     {
-      "name": "vite:build-html"
-    },
-    {
       "name": "vite:worker-import-meta-url"
     },
     {
       "name": "vite:asset-import-meta-url"
-    },
-    {
-      "name": "vite:force-systemjs-wrap-complete"
-    },
-    {
-      "name": "commonjs",
-      "version": "26.0.1"
-    },
-    {
-      "name": "vite:data-uri"
     },
     {
       "name": "vite:dynamic-import-vars"
@@ -248,19 +235,13 @@
       "name": "vite:import-glob"
     },
     {
-      "name": "vite:build-import-analysis"
+      "name": "vite:client-inject"
     },
     {
-      "name": "vite:esbuild-transpile"
+      "name": "vite:css-analysis"
     },
     {
-      "name": "vite:terser"
-    },
-    {
-      "name": "vite:reporter"
-    },
-    {
-      "name": "vite:load-fallback"
+      "name": "vite:import-analysis"
     }
   ],
   "define": {
@@ -353,7 +334,7 @@
       },
       {
         "find": "@browser-module/ui/header",
-        "replacement": "http://localhost:5002/poc-mfe-vite/src/components/Header.vue"
+        "replacement": "http://localhost:6002/poc-mfe-vite/header.js"
       },
       {
         "find": "@browser-module/ui/login",
@@ -557,13 +538,14 @@
     "/home/mpopel/lab/poc-mfe-vite-root/vite.config.mts"
   ],
   "inlineConfig": {
-    "build": {}
+    "build": {},
+    "preview": {}
   },
   "root": "/home/mpopel/lab/poc-mfe-vite-root",
   "rawBase": "/poc-mfe-vite/",
   "publicDir": "/home/mpopel/lab/poc-mfe-vite-root/public",
   "cacheDir": "/home/mpopel/lab/poc-mfe-vite-root/node_modules/.vite",
-  "command": "build",
+  "command": "serve",
   "mode": "production",
   "isWorker": false,
   "mainConfig": null,

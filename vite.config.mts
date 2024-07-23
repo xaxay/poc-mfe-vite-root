@@ -11,7 +11,7 @@ import baseUrl from './src/config/baseUrl';
 // and inject CSS into JS
 import vuetify, { transformAssetUrls } from './vite-plugin-vuetify-browser'
 
-import { ImportMapsPlugin } from './vite-plugin-import-maps';
+import { defaultImportMapsConfig, ImportMapsPlugin } from './vite-plugin-import-maps';
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
@@ -44,7 +44,13 @@ const config = defineConfig((env: ConfigEnv) => {
         injectCSS: true
       }),
 
-      ImportMapsPlugin(),
+      ImportMapsPlugin({
+        ...defaultImportMapsConfig,
+
+        entryTemplate: 'assets/[name]-[hash].[ext]',
+        assetTemplate: 'assets/[name]-[hash].[ext]',
+        chunckTemplate: 'assets/[name]-[hash].js',
+      }),
 
       {
         name: 'log-config-plugin',

@@ -11,6 +11,9 @@ import baseUrl from './src/config/baseUrl';
 
 
 export interface ImportMapsConfig {
+  entryTemplate: string;
+  assetTemplate: string;
+  chunckTemplate: string;
   importMaps: {
     type?: string;
     modules?: string;
@@ -72,14 +75,19 @@ function joinImportMaps(maps: ImportMap[]): ImportMap {
 
 const printedModules = new Set<string>();
 
-export function ImportMapsPlugin(config: ImportMapsConfig = {
+export const defaultImportMapsConfig : ImportMapsConfig = {
   importMaps: {
     modules: 'src/importMap.modules.json',
     dev: ['src/importMap.dev.json'],
     build: ['src/importMap.build.json'],
     type: 'importmap',
   },
-}): Plugin {
+  entryTemplate: '[name]-[hash].[ext]',
+  assetTemplate: 'assets/[name]-[hash].[ext]',
+  chunckTemplate: 'assets/[name]-[hash].js',
+} as ImportMapsConfig;
+
+export function ImportMapsPlugin(pluginConfig: ImportMapsConfig = defaultImportMapsConfig): Plugin {
   // console.log('[vite-plugin-import-maps] ImportMapsPlugin.init ...');
 
   let devMode = true;
@@ -100,7 +108,7 @@ export function ImportMapsPlugin(config: ImportMapsConfig = {
   let inputKeysSet: Set<string> = new Set();
 
   function updateImportMaps() {
-    const importMaps: ImportMap[] = loadImportMapFiles(devMode, config);
+    const importMaps: ImportMap[] = loadImportMapFiles(devMode, pluginConfig);
 
     importMapSrc = joinImportMaps(importMaps);
     importMap = { imports: { ...importMapSrc.imports }, scopes: { ...importMapSrc.scopes } };
@@ -205,9 +213,10 @@ export function ImportMapsPlugin(config: ImportMapsConfig = {
                   const chunkName: string = chunkInfo.name;
                   console.log(chalk.blue.bold('[entry]'), chalk.magenta(chunkName), chalk.cyanBright(chunkInfo.facadeModuleId));//, chunkInfo);
                   if (inputKeysSet.has(chunkName)) {
-                    return `assets/${basename(chunkName)}-[hash].js`;
+                    return pluginConfig.chunckTemplate.replace('[name]', basename(chunkName));
+                    // return `assets/${basename(chunkName)}-[hash].js`;
                   }
-                  return 'assets/[name]-[hash].[ext]';
+                  return pluginConfig.entryTemplate;
                 },
 
                 chunkFileNames(chunkInfo: PreRenderedChunk): string {
@@ -219,14 +228,15 @@ export function ImportMapsPlugin(config: ImportMapsConfig = {
                     //   updatedChunkName = chunkName.substring(1);
                     // }
                     updatedChunkName = updatedChunkName.replaceAll('_', '--');
-                    return `assets/${updatedChunkName}-[hash].js`;
+                    return pluginConfig.chunckTemplate.replace('[name]', updatedChunkName);
+                    // return `assets/${updatedChunkName}-[hash].js`;
                   }
-                  return 'assets/[name]-[hash].js';
+                  return pluginConfig.chunckTemplate;
                 },
 
                 assetFileNames: (chunkInfo: PreRenderedAsset) : string => {
                   console.log(chalk.blue.bold('[assetFileNames]'), chalk.magenta(chunkInfo.name));//, chalk.cyanBright(chunkInfo.source), chunkInfo);
-                  return 'assets/[name]-[hash].[ext]';
+                  return pluginConfig.assetTemplate;
                 },
               },
             },
@@ -245,7 +255,7 @@ export function ImportMapsPlugin(config: ImportMapsConfig = {
           if (devMode) {
             useBaseUrlInImportMap(); // in build mode it is updated inside generateBundle
           }
-          const importMapAsString = `<script type="${config.importMaps?.type ?? 'importmap'}">\n${JSON.stringify(importMap, null, 2)}\n</script>`;
+          const importMapAsString = `<script type="${pluginConfig.importMaps?.type ?? 'importmap'}">\n${JSON.stringify(importMap, null, 2)}\n</script>`;
           return html.replace('</head>', `${importMapAsString}\n  </head>`);
         }
         return html;

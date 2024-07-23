@@ -1,5 +1,6 @@
 // src/main.ts
 
+import * as _nav from '@browser-module/api/nav' // preload it first
 import App from '@/App.vue'
 import { createApp } from 'vue'
 import { createVuetify } from 'vuetify'
