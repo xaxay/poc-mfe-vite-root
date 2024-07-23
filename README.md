@@ -17,7 +17,7 @@ It is distributed on few repositories:
 
 # Demo
 
-[Click to see Demo](https://xaxay.github.io/poc-mfe-vite-root/)
+[Click to see Demo](https://xaxay.github.io/poc-mfe-vite-root/) ( use admin/admin or any login with same password)
 
 It proves that it works and demonstrate how all these parts are initialized and interacted together from different in-browser modules!
 
