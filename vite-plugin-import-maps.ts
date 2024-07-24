@@ -129,7 +129,7 @@ export function ImportMapsPlugin(pluginConfig: ImportMapsConfig = defaultImportM
       if (v.startsWith('http://') || v.startsWith('https://')) {
         return;
       }
-      inputs[k] = resolve(__dirname, v);
+      inputs[k] = v;
     });
 
     const inputKeysArray = Object.keys(inputs);
