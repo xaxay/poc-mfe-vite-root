@@ -1,7 +1,7 @@
 {
   "imports": {
     "@browser-module/router": "/src/router.ts",
-    "@browser-module/config/routes": "/src/config/routes.ts",
+    "@browser-module/config/routes": "/config/routes.ts",
 
     "@browser-module/stores/counter": "/src/stores/counterStore.ts",
 

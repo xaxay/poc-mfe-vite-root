@@ -6,8 +6,10 @@ import externalize from 'vite-plugin-externalize-dependencies';
 import { resolve, basename, join as joinOrig } from 'path';
 import chalk from 'chalk';
 import { NormalizedOutputOptions, OutputBundle, PreRenderedAsset, PreRenderedChunk } from 'rollup';
-import baseUrl from './src/config/baseUrl';
 // console.log('[vite-plugin-import-maps] baseUrl:', baseUrl);
+
+let baseUrl = undefined;
+
 
 function join(...paths: string[]): string {
   return joinOrig(...paths).replaceAll('\\', '/');
@@ -130,6 +132,12 @@ export function ImportMapsPlugin(pluginConfig: ImportMapsConfig = defaultImportM
 
     Object.entries(importMap.imports).forEach(([k, v]) => {
       if (v.startsWith('http://') || v.startsWith('https://')) {
+        if (v.startsWith('http://@/')) {
+          importMap.imports[k] = v.replace('http://@/', '/');
+        }
+        else if (v.startsWith('https://@/')) {
+          importMap.imports[k] = v.replace('https://@/', '/');
+        }
         return;
       }
       inputs[k] = v;
@@ -173,6 +181,7 @@ export function ImportMapsPlugin(pluginConfig: ImportMapsConfig = defaultImportM
 
     config(config: any, env: ConfigEnv) {
       devMode = env.command === 'serve';
+      baseUrl = config.base;
 
       updateImportMaps();
 

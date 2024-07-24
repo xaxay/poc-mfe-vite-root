@@ -337,7 +337,7 @@
       },
       {
         "find": "@browser-module/config/routes",
-        "replacement": "/src/config/routes.ts"
+        "replacement": "/config/routes.ts"
       },
       {
         "find": "@browser-module/stores/counter",
@@ -353,7 +353,7 @@
       },
       {
         "find": "@browser-module/ui/header",
-        "replacement": "https://xaxay.github.io/poc-mfe-vite-header/header.js"
+        "replacement": "/poc-mfe-vite-header/header.js"
       },
       {
         "find": "@browser-module/ui/login",
@@ -361,11 +361,11 @@
       },
       {
         "find": "@browser-module/ui/dashboard",
-        "replacement": "https://xaxay.github.io/poc-mfe-vite-dashboard/dashboard.js"
+        "replacement": "/poc-mfe-vite-dashboard/dashboard.js"
       },
       {
         "find": "@browser-module/ui/admin",
-        "replacement": "https://xaxay.github.io/poc-mfe-vite-admin/admin.js"
+        "replacement": "/poc-mfe-vite-admin/admin.js"
       },
       {
         "find": "@browser-module/ui/account",
@@ -479,7 +479,7 @@
       "input": {
         "index": "/home/mpopel/lab/poc-mfe-vite-root/index.html",
         "@browser-module/router": "/src/router.ts",
-        "@browser-module/config/routes": "/src/config/routes.ts",
+        "@browser-module/config/routes": "/config/routes.ts",
         "@browser-module/stores/counter": "/src/stores/counterStore.ts",
         "@browser-module/api/user": "/src/api/user.ts",
         "@browser-module/api/nav": "/src/api/nav.ts",
@@ -548,7 +548,7 @@
   },
   "configFile": "/home/mpopel/lab/poc-mfe-vite-root/vite.config.mts",
   "configFileDependencies": [
-    "/home/mpopel/lab/poc-mfe-vite-root/src/config/baseUrl.ts",
+    "/home/mpopel/lab/poc-mfe-vite-root/config/baseUrl.ts",
     "/home/mpopel/lab/poc-mfe-vite-root/vite-plugin-vuetify-browser.ts",
     "/home/mpopel/lab/poc-mfe-vite-root/vite-plugin-import-maps.ts",
     "/home/mpopel/lab/poc-mfe-vite-root/vite-plugin-vue-build-injected-css.ts",

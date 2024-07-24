@@ -13,7 +13,7 @@
 console.log('[nav.ts]')
 
 import { RouteLocationNormalizedLoaded, RouteLocationRaw, Router } from 'vue-router';
-import routesConfig from '@/config/routes';
+import routesConfig from '@browser-module/config/routes';
 
 console.log('Started dynamic import of @browser-module/router')
 let routerPromise : Promise<any> = import('@browser-module/router');

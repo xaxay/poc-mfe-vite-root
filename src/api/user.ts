@@ -2,7 +2,7 @@
 
 console.log('[user.ts]')
 
-import { useUserStore } from '../stores/userStore';
+import { useUserStore } from '@/stores/userStore';
 import { navigateTo, getCurrentRoute } from '@browser-module/api/nav';
 
 function getUserStore() {
