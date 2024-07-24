@@ -9,6 +9,7 @@
     "vite.config.mts", 
     "vite-plugin-import-maps.ts", 
     "vite-plugin-vuetify-browser.ts",
-    "vite-plugin-vue-build-injected-css.ts"
+    "vite-plugin-vue-build-injected-css.ts",
+    "config/baseUrl.js"
   ]
 }
