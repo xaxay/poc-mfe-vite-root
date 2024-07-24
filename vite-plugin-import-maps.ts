@@ -3,12 +3,15 @@ import { existsSync, readFileSync } from 'fs';
 import { ConfigEnv, Plugin } from 'vite';
 import { fileURLToPath, URL } from 'node:url';
 import externalize from 'vite-plugin-externalize-dependencies';
-import { resolve, basename, join } from 'path';
+import { resolve, basename, join as joinOrig } from 'path';
 import chalk from 'chalk';
 import { NormalizedOutputOptions, OutputBundle, PreRenderedAsset, PreRenderedChunk } from 'rollup';
 import baseUrl from './src/config/baseUrl';
 // console.log('[vite-plugin-import-maps] baseUrl:', baseUrl);
 
+function join(...paths: string[]): string {
+  return joinOrig(...paths).replaceAll('\\', '/');
+}
 
 export interface ImportMapsConfig {
   entryTemplate: string;
