@@ -47,9 +47,9 @@ const config = defineConfig((env: ConfigEnv) => {
       ImportMapsPlugin({
         ...defaultImportMapsConfig,
 
-        entryTemplate: 'assets/[name]-[hash].[ext]',
-        assetTemplate: 'assets/[name]-[hash].[ext]',
-        chunckTemplate: 'assets/[name]-[hash].js',
+        entryTemplate: '[name]-[hash].[ext]',
+        assetTemplate: '[name]-[hash].[ext]',
+        chunckTemplate: '[name]-[hash].js',
       }),
 
       {

@@ -1,4 +1,4 @@
-// src/config/routes.ts
+// config/routes.ts
 
 import { RoutesConfig } from "@/types/routeTypes";
 
