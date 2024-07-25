@@ -9,9 +9,9 @@
     "@browser-module/api/nav": "/src/api/nav.ts",
     "@browser-module/ui/login": "/src/components/Login.vue",
 
-    "@browser-module/ui/header": "http://@/osi_portal_ui_header/header.js",
-    "@browser-module/ui/dashboard": "http://@/osi_portal_ui_dashboard/dashboard.js",
-    "@browser-module/ui/admin": "http://@/osi_portal_ui_plugin_admin/admin.js",
+    "@browser-module/ui/header": "http://@/poc-mfe-vite-header/header.js",
+    "@browser-module/ui/dashboard": "http://@/poc-mfe-vite-dashboard/dashboard.js",
+    "@browser-module/ui/admin": "http://@/poc-mfe-vite-admin/admin.js",
 
     "@browser-module/ui/account": "/src/components/CounterClicker.vue",
     "@browser-module/ui/rumors": "/src/components/CounterClicker.vue",
