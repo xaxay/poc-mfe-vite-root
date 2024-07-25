@@ -11,7 +11,7 @@ import baseUrl from './config/baseUrl';
 // and inject CSS into JS
 import vuetify, { transformAssetUrls } from './vite-plugin-vuetify-browser'
 
-import { defaultImportMapsConfig, ImportMapsPlugin } from './vite-plugin-import-maps';
+import { ImportMapsPlugin } from './vite-plugin-import-maps';
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
@@ -45,11 +45,21 @@ const config = defineConfig((env: ConfigEnv) => {
       }),
 
       ImportMapsPlugin({
-        ...defaultImportMapsConfig,
+        importMaps: {
+          type: 'importmap',
+          dir: 'config/',
+          dev: ['importMap.dev.json', 'importMap.modules.dev.localhosts.json'],
+          build: ['importMap.build.json', 'importMap.modules.build.localhosts.json'],
+          // build: ['importMap.build.json', 'importMap.modules.build.samehost.json'],
+        },
 
-        entryTemplate: '[name]-[hash].[ext]',
-        assetTemplate: '[name]-[hash].[ext]',
-        chunckTemplate: '[name]-[hash].js',
+        // entryTemplate: '[name].[ext]',
+        // assetTemplate: '[name].[ext]',
+        // chunckTemplate: '[name].js',
+
+        entryTemplate: 'root/[name]-[hash].[ext]',
+        assetTemplate: 'root/[name]-[hash].[ext]',
+        chunckTemplate: 'root/[name]-[hash].js',
       }),
 
       {
@@ -92,7 +102,7 @@ const config = defineConfig((env: ConfigEnv) => {
     build: {
       // minify: false,
 
-      outDir: 'docs',
+      outDir: 'dist',
 
       rollupOptions: {
         output: {
