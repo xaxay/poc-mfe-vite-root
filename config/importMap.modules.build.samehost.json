@@ -1,0 +1,34 @@
+{
+  "imports": {
+    "@browser-module/router": "/src/router.ts",
+    "@browser-module/config/routes": "/config/routes.ts",
+
+    "@browser-module/stores/counter": "/src/stores/counterStore.ts",
+
+    "@browser-module/api/user": "/src/api/user.ts",
+    "@browser-module/api/nav": "/src/api/nav.ts",
+    "@browser-module/ui/login": "/src/components/Login.vue",
+
+    "@browser-module/ui/header": "http://@/osi_portal_ui_header/header.js",
+    "@browser-module/ui/dashboard": "http://@/osi_portal_ui_dashboard/dashboard.js",
+    "@browser-module/ui/admin": "http://@/osi_portal_ui_plugin_admin/admin.js",
+
+    "@browser-module/ui/account": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/rumors": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app4": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app5": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app6": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app7": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app8": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app9": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app10": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app11": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app12": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app13": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app14": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app15": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app16": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app17": "/src/components/CounterClicker.vue",
+    "@browser-module/ui/app18": "/src/components/CounterClicker.vue"
+  }
+}
