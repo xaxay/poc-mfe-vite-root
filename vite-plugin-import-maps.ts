@@ -21,7 +21,7 @@ export interface ImportMapsConfig {
   chunckTemplate: string;
   importMaps: {
     type?: string;
-    modules?: string[];
+    dir?: string,
     dev?: string[];
     build?: string[];
   };
@@ -34,12 +34,12 @@ export interface ImportMap {
 
 function loadImportMapFiles(devMode: boolean, config: ImportMapsConfig): ImportMap[] {
 
-  const devImportMapFiles: string[] = config.importMaps.dev;
-  const buildImportMapFiles: string[] = config.importMaps.build;
-  const modulesImportMapFile: string[] = config.importMaps.modules;
+  const dir = config.importMaps.dir || '';
+  const devImportMapFiles: string[] = config.importMaps.dev.map(f => `${dir}${f}`);
+  const buildImportMapFiles: string[] = config.importMaps.build.map(f => `${dir}${f}`);
   let importMapFiles: string[] = devMode 
-    ? [...devImportMapFiles, ...modulesImportMapFile]
-    : [...buildImportMapFiles, ...modulesImportMapFile];
+    ? [...devImportMapFiles]
+    : [...buildImportMapFiles];
 
   console.log(`[vite-plugin-import-maps] baseUrl:${baseUrl} import-map-files:${importMapFiles} devMode:${devMode}`);
 
@@ -76,19 +76,8 @@ function joinImportMaps(maps: ImportMap[]): ImportMap {
 
 const printedModules = new Set<string>();
 
-export const defaultImportMapsConfig : ImportMapsConfig = {
-  importMaps: {
-    modules: ['config/importMap.modules.json'],
-    dev: ['config/importMap.dev.json'],
-    build: ['config/importMap.build.json'],
-    type: 'importmap',
-  },
-  entryTemplate: '[name]-[hash].[ext]',
-  assetTemplate: 'assets/[name]-[hash].[ext]',
-  chunckTemplate: 'assets/[name]-[hash].js',
-} as ImportMapsConfig;
 
-export function ImportMapsPlugin(pluginConfig: ImportMapsConfig = defaultImportMapsConfig): Plugin {
+export function ImportMapsPlugin(pluginConfig: ImportMapsConfig): Plugin {
   // console.log('[vite-plugin-import-maps] ImportMapsPlugin.init ...');
 
   let devMode = true;
